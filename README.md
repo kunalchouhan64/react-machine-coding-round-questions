@@ -2,10 +2,11 @@ React Machine Coding Questions:
 
 1. Custom Tabs - ✅
 2. Countdown Timer - ✅
-4. Login / SignUp - ✅
-5. Model Overlay -
+3. Login / SignUp - ✅
+4. Model Overlay - ✅
 
------- 
+---
+
 1. Accordian
 2. Pagination
 3. E commerce
