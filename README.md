@@ -7,7 +7,7 @@ React Machine Coding Questions:
 
 ---
 
-1. Accordian
+1. Accordian - ✅
 2. Pagination
 3. E commerce
 4. Image Corousel
