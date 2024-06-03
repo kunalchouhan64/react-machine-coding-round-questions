@@ -5,8 +5,7 @@ React Machine Coding Questions:
 4. Login / SignUp - ✅
 5. Model Overlay -
 
-------
-
+------ 
 1. Accordian
 2. Pagination
 3. E commerce
