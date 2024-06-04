@@ -8,7 +8,7 @@ React Machine Coding Questions:
 ---
 
 1. Accordian - ✅
-2. Pagination
+2. Pagination - ✅
 3. E commerce
 4. Image Corousel
 5. Stop Watch
