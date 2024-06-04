@@ -45,7 +45,7 @@ const Accordian = () => {
                                     <div key={item.id} className='py-4 space-y-2'>
                                         <div onClick={() => Handleclick(item.id)} className='bg-zinc-700 p-5 cursor-pointer flex justify-between items-center'>
                                             <p>{item.title}</p>
-                                            <p>{isshowing === item.id? '🔼' : '🔽'}</p>
+                                            <p>{isshowing === item.id ? '🔼' : '🔽'}</p>
                                         </div>
                                         <div className={`bg-black text-white p-5  ${isshowing === item.id ? 'block' : 'hidden'}`}>
                                             <p>{item.content}</p>
