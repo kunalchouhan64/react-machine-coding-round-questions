@@ -9,6 +9,7 @@ import Pagination from './Component/Pagination/Pagination'
 import Home from './Component/E-Comm/Home'
 import Cart from './Component/E-Comm/Cart'
 import ProductDetails from './Component/E-Comm/ProductDetails'
+import ImageCorousel from './Component/Corousel/ImageCorousel'
 
 const App = () => {
   return (
@@ -23,7 +24,7 @@ const App = () => {
         <Route path='/pagination' element={<Pagination />} />
         <Route path='/ecomm' element={<Home />} />
         <Route path='/ecome-cart' element={<Cart />} />
-        <Route path='/product-details/:id' element={<ProductDetails />} />
+        <Route path='/image-corousel' element={<ImageCorousel />} />
       </Routes>
 
     </>

@@ -10,7 +10,7 @@ React Machine Coding Questions:
 1. Accordian - ✅
 2. Pagination - ✅
 3. E commerce - ✅ ( Fetch Products, Add To Cart, Remove From Cart, Increse & Decrease Quantity, Total Quantity & Price)
-4. Image Corousel
+4. Image Corousel -  - ✅
 5. Stop Watch
 6. To Do App
 7. Infinite Scroll Shimmer UI
