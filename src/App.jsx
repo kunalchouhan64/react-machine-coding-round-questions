@@ -10,6 +10,9 @@ import Home from './Component/E-Comm/Home'
 import Cart from './Component/E-Comm/Cart'
 import ProductDetails from './Component/E-Comm/ProductDetails'
 import ImageCorousel from './Component/Corousel/ImageCorousel'
+import Stopwatch from './Component/StopWatch/Stopwatch'
+import ToDo from './Component/ToDoApp/ToDo'
+import ToDoRedux from './Component/ToDoWithRedux/ToDoRedux'
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
         <Route path='/ecomm' element={<Home />} />
         <Route path='/ecome-cart' element={<Cart />} />
         <Route path='/image-corousel' element={<ImageCorousel />} />
+        <Route path='/stop-watch' element={<Stopwatch />} />
+        <Route path='/todo' element={<ToDo />} />
+        <Route path='/redux-todo' element={<ToDoRedux />} />
       </Routes>
 
     </>
