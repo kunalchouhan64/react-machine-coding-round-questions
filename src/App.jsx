@@ -14,8 +14,12 @@ import Stopwatch from './Component/StopWatch/Stopwatch'
 import ToDo from './Component/ToDoApp/ToDo'
 import ToDoRedux from './Component/ToDoWithRedux/ToDoRedux'
 import InfiniteScroll from './Component/InfiniteScroll/InfiniteScroll'
+import UseContextHook from '../Hooks/UseContextHook'
+import UseReducerHook from '../Hooks/UseReducerHook'
+import ProgressBar from './Component/ProgressBar/ProgressBar'
 
 const App = () => {
+
   return (
     <>
       <Routes>
@@ -33,6 +37,9 @@ const App = () => {
         <Route path='/todo' element={<ToDo />} />
         <Route path='/redux-todo' element={<ToDoRedux />} />
         <Route path='/infinite-scroll' element={<InfiniteScroll />} />
+        <Route path='/progress-bar' element={<ProgressBar />} />
+        <Route path='/usecontexthook' element={<UseContextHook />} />
+        <Route path='/usereducerhook' element={<UseReducerHook />} />
       </Routes>
 
     </>

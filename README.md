@@ -14,6 +14,6 @@ React Machine Coding Questions:
 5. Stop Watch - ✅
 6. To Do App - ✅
 7. Infinite Scroll Shimmer UI - ✅
-8. Progress Bar 
+8. Progress Bar  - ✅
 9. Star Rating
 10. Tic Tac Toe
