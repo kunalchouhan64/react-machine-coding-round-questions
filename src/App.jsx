@@ -13,6 +13,7 @@ import ImageCorousel from './Component/Corousel/ImageCorousel'
 import Stopwatch from './Component/StopWatch/Stopwatch'
 import ToDo from './Component/ToDoApp/ToDo'
 import ToDoRedux from './Component/ToDoWithRedux/ToDoRedux'
+import InfiniteScroll from './Component/InfiniteScroll/InfiniteScroll'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/stop-watch' element={<Stopwatch />} />
         <Route path='/todo' element={<ToDo />} />
         <Route path='/redux-todo' element={<ToDoRedux />} />
+        <Route path='/infinite-scroll' element={<InfiniteScroll />} />
       </Routes>
 
     </>

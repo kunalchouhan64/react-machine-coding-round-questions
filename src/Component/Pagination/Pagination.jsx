@@ -5,7 +5,8 @@ const Pagination = () => {
     // Dummy Product API
     const Products_API = "https://dummyjson.com/products?limit=100";
     const [products, SetProducts] = useState([])
-    const [page, SetPage] = useState(1)
+    const [currentpage, SetCurrentPage] = useState(1)
+    const [cardsperpage, SetCardsPerPage] = useState(6)
 
     const FetchProducts = async () => {
         try {
@@ -25,11 +26,13 @@ const Pagination = () => {
         FetchProducts()
     }, [])
 
+    const lastsliceindex = currentpage * cardsperpage
+    const firstsliceindex = lastsliceindex - cardsperpage
 
 
     const HandlePageClick = (pageclicked) => {
         // alert(pageclicked)
-        SetPage(pageclicked)
+        SetCurrentPage(pageclicked)
     }
 
     console.log((products?.length / 10) - 1)
@@ -44,14 +47,14 @@ const Pagination = () => {
         // }
 
         //⭐Second Logic
-        page === 1 ? SetPage(products?.length / 10) : SetPage(page - 1)
+        currentpage === 1 ? SetCurrentPage(products?.length / 10) : SetCurrentPage(currentpage - 1)
     }
 
     const HandleNextPage = () => {
-        if (page >= products.length / 10) {
-            SetPage(1)
+        if (currentpage >= products.length / 10) {
+            SetCurrentPage(1)
         } else {
-            SetPage(page + 1)
+            SetCurrentPage(currentpage + 1)
         }
     }
     return (
@@ -60,7 +63,7 @@ const Pagination = () => {
                 <h2 className='pb-7 font-Raleway text-3xl'>Pagination - React JS</h2>
                 <div className='grid grid-cols-3 place-items-center justify-items-center w-2/3 h-auto gap-5'>
                     {
-                        products.slice(page * 9 - 9, page * 9).map((item) => {
+                        products.slice(firstsliceindex, lastsliceindex).map((item) => {
                             return (
                                 <>
                                     <div key={item.id}>
@@ -74,7 +77,7 @@ const Pagination = () => {
                     }
                 </div>
                 <div className='py-3 pt-6 font-Raleway'>
-                    Current Page: {page} / {products.length / 10}
+                    Current Page: {currentpage} / {products.length / 10}
                 </div>
                 <div className='flex justify-center items-center space-x-5 text-white pb-6 pt-3'>
                     <div>
@@ -83,7 +86,7 @@ const Pagination = () => {
                     <div>
                         {
                             new Array(products.length / 10).fill().map((_, i) => (
-                                <span onClick={() => HandlePageClick(i + 1)} className={`py-2 cursor-pointer px-4  border border-white ${i + 1 === page ? "bg-white text-black" : "bg-black text-white"}`} key={i}>{i + 1}</span>
+                                <span onClick={() => HandlePageClick(i + 1)} className={`py-2 cursor-pointer px-4  border border-white ${i + 1 === currentpage ? "bg-white text-black" : "bg-black text-white"}`} key={i}>{i + 1}</span>
                             ))
                         }
                     </div>
