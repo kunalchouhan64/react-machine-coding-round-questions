@@ -61,10 +61,19 @@ const MultiStepperForm = () => {
     }
     console.log(formdata);
 
+    const HandleBack = () => {
+        SetCurentIndex(currentindex - 1)
+    }
+
     return (
         <>
             <div className='min-h-screen w-full bg-zinc-800 text-white flex flex-col justify-start p-10 items-center'>
                 <h2>Multi Stepper Form</h2>
+                {
+                    currentindex > 0 && (
+                        <div className='p-10'><button onClick={HandleBack} className='py-2 px-5 border border-white'>Back</button></div>
+                    )
+                }
                 <form onSubmit={HandleSubmit}>
                     <input value={formdata[forms[currentindex].name]} onChange={HandleInputChange} type={forms[currentindex].inputtype} name={forms[currentindex].name} placeholder={forms[currentindex].placeholder} required className='py-2 border border-white px-5 bg-transparent text-white' />
                     <button type='submit' className='bg-gray-200 text-black py-2 px-9'>{forms[currentindex].issubmit ? 'Submit' : 'Next'}</button>
