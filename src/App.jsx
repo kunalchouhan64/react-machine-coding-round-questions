@@ -17,13 +17,22 @@ import InfiniteScroll from './Component/InfiniteScroll/InfiniteScroll'
 import UseContextHook from '../Hooks/UseContextHook'
 import UseReducerHook from '../Hooks/UseReducerHook'
 import ProgressBar from './Component/ProgressBar/ProgressBar'
+import StarRating from './Component/StarRating/StarRating'
+import AnotherTodo from './Component/AnotherTODO'
+import OTP from './Component/OTP/OTP'
+import ProtectedRoutes from './Utils/ProtectedRoutes'
+import DarkMode from './Component/DarkMode'
+import MultiStepperForm from './Component/MultiStepperForm/MultiStepperForm'
 
 const App = () => {
 
   return (
     <>
       <Routes>
-        <Route path='/' element={<h1>Home page</h1>} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path='/' element={<h1>Home page</h1>} />
+        </Route>
+
         <Route path='/tabs' element={<Tabs />} />
         <Route path='/countdown' element={<CountDown />} />
         <Route path='/loginsignup' element={<LoginSignup />} />
@@ -38,8 +47,13 @@ const App = () => {
         <Route path='/redux-todo' element={<ToDoRedux />} />
         <Route path='/infinite-scroll' element={<InfiniteScroll />} />
         <Route path='/progress-bar' element={<ProgressBar />} />
+        <Route path='/star-rating' element={<StarRating />} />
         <Route path='/usecontexthook' element={<UseContextHook />} />
         <Route path='/usereducerhook' element={<UseReducerHook />} />
+        <Route path='/anothertodo' element={<AnotherTodo />} />
+        <Route path='/otp' element={<OTP />} />
+        <Route path='/dark-mode' element={<DarkMode />} />
+        <Route path='/multi-stepper-form' element={<MultiStepperForm />} />
       </Routes>
 
     </>

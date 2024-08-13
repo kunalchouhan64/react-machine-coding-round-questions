@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 const OverlayModel = () => {
     // State to show and hide the model
     const [ismodelshow, SetIsModelShow] = useState(false)
+    
     return (
         <>
 

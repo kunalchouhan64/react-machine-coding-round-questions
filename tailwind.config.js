@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -11,6 +12,7 @@ export default {
         Raleway: ['Raleway', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
       }, //end of fontFamily
+      
     },
   },
   plugins: [],

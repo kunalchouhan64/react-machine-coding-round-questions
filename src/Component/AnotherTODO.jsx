@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ToDo = () => {
+const AnotherTODO = () => {
     const [alltodos, SetAllTodos] = useState([]);
     const [todotext, SetToDoText] = useState()
     const [isediting, SetIsEditing] = useState(false)
@@ -79,4 +79,4 @@ const ToDo = () => {
     )
 }
 
-export default ToDo
+export default AnotherTODO

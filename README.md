@@ -15,5 +15,20 @@ React Machine Coding Questions:
 6. To Do App - ✅
 7. Infinite Scroll Shimmer UI - ✅
 8. Progress Bar  - ✅
-9. Star Rating
+9. Star Rating  - ✅
 10. Tic Tac Toe
+
+----
+
+
+function SortArray(array){
+        for(let j=0; j<array.length-1; j++){
+            if(array[j] > array[j+1]){
+                array[j], array[j+1] = array[j+1], array[j]
+            }
+        }
+    }
+    return array;
+}
+
+

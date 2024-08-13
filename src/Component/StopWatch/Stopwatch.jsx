@@ -8,39 +8,30 @@ const Stopwatch = () => {
     const [isrunning, SetIsRunning] = useState(false)
 
 
-    const [watchhour, SetWatchHour] = useState('0')
-    const [watchminutes, SetWatchMinutes] = useState('0')
-    const [watchseconds, SetWatchSeconds] = useState('0')
-    const [ampm, SetAMPM] = useState(0)
 
-    const updateTime = () => {
-        console.log(new Date().toLocaleTimeString());
-        SetAMPM(new Date().getMilliseconds());
-        SetWatchSeconds(new Date().getSeconds());
-        SetWatchMinutes(new Date().getMinutes());
-        SetWatchHour(new Date().getHours());
-    }
-    setInterval(updateTime, 1000);
+
 
 
     useEffect(() => {
 
         if (isrunning) {
             const storeinterval = setInterval(() => {
-                SetMiliSecond((prevmilisec) => {
-                    if (prevmilisec < 99) {
-                        return prevmilisec + 1;
+                SetMiliSecond((premilisec) => {
+                    if (premilisec < 99) {
+                        return premilisec + 1
                     } else {
-                        SetSeconds((prevsec) => {
-                            if (prevsec < 59) {
-                                return prevsec + 1
+                        SetSeconds((prevsecond) => {
+                            if (prevsecond < 59) {
+                                return prevsecond + 1;
                             } else {
-                                SetMinutes((prevmin) => {
-                                    if (prevmin < 59) {
-                                        return prevmin + 1;
+                                SetMinutes((prevminutes) => {
+                                    if (prevminutes < 59) {
+                                        return prevminutes + 1
                                     } else {
-                                        SetHour((prevhour) => prevhour + 1)
-                                        return 0;
+                                        SetHour((prev) => {
+                                            return prev + 1
+                                        })
+                                        return 0
                                     }
                                 })
                                 return 0;
@@ -131,16 +122,7 @@ const Stopwatch = () => {
     return (
         <>
             <div className='min-h-screen w-full bg-zinc-900 text-white flex justify-center items-center flex-col space-y-5'>
-                <h2 className='font-Raleway text-2xl font-semibold'>Clock / Watch </h2>
-                <div className='py-5 px-8 border border-white w-1/2 font-Raleway'>
-                    <div className='flex justify-evenly text-2xl'> <span>{watchhour > 12 ? `${ watchhour - 12}` : watchhour} Hour</span> <span>:</span> <span>{watchminutes < 10 ? `0${watchminutes}` : watchminutes} Minutes</span>
 
-                        <span>:</span> <span>{watchseconds < 10 ? `0${watchseconds}` : watchseconds} Sec</span>
-                        <span>:</span> <span>{ampm} Sec</span>
-
-                    </div>
-
-                </div>
                 <h2 className='font-Raleway text-2xl font-semibold'>Stop Watch</h2>
                 <div className='py-5 px-8 border border-white w-1/2 font-Raleway'>
                     <div className='flex justify-evenly text-2xl'> <span>{hour < 10 ? `0${hour}` : hour} Hour</span> <span>:</span> <span>{minutes < 10 ? `0${minutes}` : minutes} Minutes</span> <span>:</span> <span>{seconds < 10 ? `0${seconds}` : seconds} Sec</span>

@@ -26,8 +26,8 @@ const Pagination = () => {
         FetchProducts()
     }, [])
 
-    const lastsliceindex = currentpage * cardsperpage
-    const firstsliceindex = lastsliceindex - cardsperpage
+    const lastindex = currentpage * cardsperpage
+    const firstindex = lastindex - cardsperpage
 
 
     const HandlePageClick = (pageclicked) => {
@@ -63,7 +63,7 @@ const Pagination = () => {
                 <h2 className='pb-7 font-Raleway text-3xl'>Pagination - React JS</h2>
                 <div className='grid grid-cols-3 place-items-center justify-items-center w-2/3 h-auto gap-5'>
                     {
-                        products.slice(firstsliceindex, lastsliceindex).map((item) => {
+                        products.slice(firstindex, lastindex).map((item) => {
                             return (
                                 <>
                                     <div key={item.id}>
